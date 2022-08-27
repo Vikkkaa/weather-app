@@ -1,4 +1,4 @@
-body {
+.container {
   text-align: center;
   color: #777777;
   font-family: "Noto Serif", serif;
@@ -51,4 +51,6 @@ h4 {
 }
 footer {
   font-size: smaller;
+  position: relative;
+  margin-left: 105px;
 }
