@@ -1,6 +1,6 @@
 .weather-container {
-max-width: 700px;
-margin: 45px auto;
+  max-width: 700px;
+  margin: 45px auto;
 }
 
 .container {
@@ -8,13 +8,13 @@ margin: 45px auto;
   color: #777777;
   font-family: "Noto Serif", serif;
   font-family: "Poppins", sans-serif;
-  
+
   border: 1.5px;
   border-style: solid;
   border-radius: 10px;
   border-color: #c5c5c5;
   box-shadow: 3px 3px 3px 3px #d8d7d7;
-  
+
   padding-bottom: 15px;
 }
 
@@ -31,18 +31,29 @@ form {
 .btn btn-outline-secondary {
   margin: 5px;
 }
+
+.weather-temperature img {
+  height: 72px;
+  width: 72px;
+  margin-left: 25px;
+}
+
 .units {
   position: relative;
   font-size: small;
   text-decoration: none;
   bottom: 18px;
 }
+
+.col-6 {
+  font-size: 14px;
+}
 h2 {
   font-size: 42px;
   margin-top: 20px;
 }
 .row {
-  margin-top: 10px;
+  margin-top: 2px;
 }
 h4 {
   font-weight: 600;
