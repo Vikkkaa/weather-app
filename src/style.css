@@ -1,15 +1,20 @@
+.weather-container {
+max-width: 700px;
+margin: 45px auto;
+}
+
 .container {
   text-align: center;
   color: #777777;
   font-family: "Noto Serif", serif;
   font-family: "Poppins", sans-serif;
-  max-width: 700px;
+  
   border: 1.5px;
   border-style: solid;
   border-radius: 10px;
   border-color: #c5c5c5;
   box-shadow: 3px 3px 3px 3px #d8d7d7;
-  margin: 45px 105px;
+  
   padding-bottom: 15px;
 }
 
@@ -52,5 +57,4 @@ h4 {
 footer {
   font-size: smaller;
   position: relative;
-  margin-left: 105px;
 }
