@@ -21,6 +21,7 @@
 h1 {
   font-weight: 400;
   margin-top: 40px;
+  margin-bottom: 15px;
 }
 
 form {
@@ -62,8 +63,8 @@ h4 {
 
 .emoji {
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
 }
 footer {
   font-size: smaller;
