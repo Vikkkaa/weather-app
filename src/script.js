@@ -1,5 +1,3 @@
-twemoji.parse(document.body);
-
 let now = new Date();
 let weekDay = document.querySelector("#weekday");
 
@@ -54,11 +52,23 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  
+ let iconElement = document.querySelector("#emoji-icon");
+ iconElement.setAttribute(
+   "src",
+   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+ );
+ iconElement.setAttribute("alt", response.data.weather[0].description);
+ 
+
+  
 }
 
 function search(cityName) {
   let apiKey = "c4c34c2ee0b71307b00dc7655493ef9a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&&units=metric`;
+  
+  
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -73,6 +83,8 @@ function submitSearch(event) {
 function searchLocation(position) {
   let apiKey = "c4c34c2ee0b71307b00dc7655493ef9a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&&units=metric`;
+  
+  
   axios.get(apiUrl).then(displayWeather);
 }
 
