@@ -60,7 +60,6 @@ function displayWeather(response) {
  );
  iconElement.setAttribute("alt", response.data.weather[0].description);
  
-
   
 }
 
