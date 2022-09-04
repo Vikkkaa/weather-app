@@ -23,6 +23,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Weather app</title>
    
   <link href="src/style.css" rel="stylesheet" type="text/css"> 
@@ -45,8 +46,8 @@
 <div class="row">
     <div class="col-6">
       <div class="d-flex weather-temperature">
-          <h2><span id = "emoji-icon">☀️</span> 
-          <span id = "current-temperature">25</span>
+          <h2><img class="material-icons md-72" id="emoji-icon"/>
+          <span class="temp" id = "current-temperature">25</span>
           <span class = "units">
           <a href = "#" id = "celcius-link">°C</a> |
           <a href = "#" id = "fahrenheit-link" >°F</a>

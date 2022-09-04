@@ -32,16 +32,22 @@ form {
   margin: 5px;
 }
 
-.weather-temperature img {
-  height: 72px;
-  width: 72px;
-  margin-left: 55px;
+.material-icons {
+  position: relative;
+  
+  margin-right: 0px;
+  margin-left: 35px;
+  margin-bottom: 10px;
+}
+
+.temp {
+  margin-left: 0px;
 }
 
 .units {
   position: relative;
   font-size: small;
-  text-decoration: none;
+  
   bottom: 25px;
 }
 
@@ -52,9 +58,11 @@ form {
 }
 
 h2 {
+  text-decoration: none;
+
   font-size: 52px;
-  margin-top: 20px;
-  margin-left: 35px;
+  margin-top: 5px;
+  
 }
 
 h4 {
@@ -64,8 +72,7 @@ h4 {
 
 .emoji {
   display: inline-block;
-  width: 45px;
-  height: 45px;
+  font-size: 36px;
 }
 footer {
   font-size: smaller;
