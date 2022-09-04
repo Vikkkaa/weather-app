@@ -24,17 +24,23 @@ h1 {
   margin-bottom: 15px;
 }
 
+.country {
+  font-size: 24px;
+  font-weight: lighter;
+  margin-top: 48px;
+}
+
 form {
   max-width: 90%;
   margin: 2px auto;
 }
 
 .btn-outline-secondary {
-border-color: #777777;
-} 
+  border-color: #777777;
+}
 
-.btn-warning.current{
-  color:#696969;
+.btn-warning.current {
+  color: #696969;
 }
 
 .btn-warning.current:hover {
@@ -45,7 +51,7 @@ border-color: #777777;
 
 .material-icons {
   position: relative;
-  
+
   margin-right: 0px;
   margin-left: 35px;
   margin-bottom: 10px;
@@ -75,7 +81,6 @@ border-color: #777777;
 }
 
 .weather-temperature .inactive {
- 
   cursor: default;
   text-decoration: none;
 }
@@ -87,10 +92,8 @@ border-color: #777777;
 }
 
 h2 {
-  
   font-size: 52px;
   margin-top: 5px;
-  
 }
 
 h4 {
