@@ -43,6 +43,7 @@ weekDay.innerHTML = `${day} | ${date} ${month} | ${hours}:${minutes}`;
 function displayWeather(response) {
   console.log(response.data);
   document.querySelector("#city-name").innerHTML = response.data.name;
+  document.querySelector("#country-name").innerHTML = response.data.sys.country;
   document.querySelector("#current-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -103,9 +104,8 @@ function showFahTemp(event) {
   celciusLink.classList.remove("inactive");
   fahrenheitLink.classList.add("active");
 
-  let fahTemp = (celcTemp * 9)/5 + 32;
+  let fahTemp = (celcTemp * 9) / 5 + 32;
   tempInput.innerHTML = Math.round(fahTemp);
-
 }
 
 function showCeTemp(event) {
@@ -123,6 +123,5 @@ fahrenheitLink.addEventListener("click", showFahTemp);
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCeTemp);
-
 
 search("Maiorca");

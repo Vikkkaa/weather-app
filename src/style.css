@@ -25,11 +25,22 @@ h1 {
 }
 
 form {
-  max-width: 60%;
+  max-width: 90%;
   margin: 2px auto;
 }
-.btn btn-outline-secondary {
-  margin: 5px;
+
+.btn-outline-secondary {
+border-color: #777777;
+} 
+
+.btn-warning.current{
+  color:#696969;
+}
+
+.btn-warning.current:hover {
+  color: #696969;
+  background-color: #f5e5b5;
+  border-color: #f5e5b5;
 }
 
 .material-icons {

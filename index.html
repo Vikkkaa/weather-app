@@ -32,14 +32,21 @@
   <body>
     <div class="weather-container">
     <div class="container">
-      <h1 id = "city-name">Figueira da Foz</h1>
+      <div class="row">
+        <div class="col-7">
+        <h1 class = "city-name" id = "city-name">Figueira da Foz</h1>
+        </div>
+        <div class="col-5">
+        <h1 class="country" id = "country-name">PT</h1>
+        </div>
+      </div>
       <form id = "search-form">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <div class="input-group mb-2" mt-3>
         <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" id = "search-text">
         <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick = "submitSearch(event)"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <span id="button-currently"><button type="button" class="btn btn-outline-secondary">Current</button></span>
+        <span id="button-currently"><button type="button" class="btn btn-warning current">Current</button></span>
       </form>
       </div>
 
