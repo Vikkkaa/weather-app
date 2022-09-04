@@ -47,8 +47,8 @@ form {
 .units {
   position: relative;
   font-size: small;
-  
   bottom: 25px;
+  text-decoration: none;
 }
 
 .col-6 {
@@ -58,8 +58,7 @@ form {
 }
 
 h2 {
-  text-decoration: none;
-
+  
   font-size: 52px;
   margin-top: 5px;
   
