@@ -52,21 +52,21 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  
- let iconElement = document.querySelector("#emoji-icon");
- iconElement.setAttribute(
-   "src",
-   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
- );
- iconElement.setAttribute("alt", response.data.weather[0].description);
- 
-  
+
+  celcTemp = Math.round(response.data.main.temp);
+
+  let iconElement = document.querySelector("#emoji-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(cityName) {
   let apiKey = "c4c34c2ee0b71307b00dc7655493ef9a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&&units=metric`;
-  
+
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -81,8 +81,7 @@ function submitSearch(event) {
 function searchLocation(position) {
   let apiKey = "c4c34c2ee0b71307b00dc7655493ef9a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&&units=metric`;
-  
-  
+
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -97,4 +96,33 @@ form.addEventListener("submit", submitSearch);
 let currentButton = document.querySelector("#button-currently");
 currentButton.addEventListener("click", showCurrentLoc);
 
-search("Figueira da Foz");
+function showFahTemp(event) {
+  event.preventDefault();
+  let tempInput = document.querySelector("#current-temperature");
+
+  celciusLink.classList.remove("inactive");
+  fahrenheitLink.classList.add("active");
+
+  let fahTemp = (celcTemp * 9)/5 + 32;
+  tempInput.innerHTML = Math.round(fahTemp);
+
+}
+
+function showCeTemp(event) {
+  event.preventDefault();
+  let tempInput = document.querySelector("#current-temperature");
+
+  celciusLink.classList.add("inactive");
+  fahrenheitLink.classList.remove("active");
+
+  tempInput.innerHTML = celcTemp;
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahTemp);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCeTemp);
+
+
+search("Maiorca");

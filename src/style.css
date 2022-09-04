@@ -1,5 +1,5 @@
 .weather-container {
-  max-width: 700px;
+  max-width: 600px;
   margin: 45px auto;
 }
 
@@ -48,6 +48,24 @@ form {
   position: relative;
   font-size: small;
   bottom: 25px;
+  text-decoration: none;
+}
+
+.weather-temperature .active {
+  color: #777777;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  color: #777777;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .inactive {
+ 
+  cursor: default;
   text-decoration: none;
 }
 
