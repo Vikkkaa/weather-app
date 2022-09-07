@@ -28,6 +28,7 @@ h1 {
   font-size: 24px;
   font-weight: lighter;
   margin-top: 48px;
+  margin-right: 45px;
 }
 
 form {
@@ -86,7 +87,7 @@ form {
 }
 
 .col-6 {
-  font-size: 14px;
+  font-size: 15px;
   text-transform: capitalize;
   margin-top: 2px;
 }
@@ -105,6 +106,15 @@ h4 {
   display: inline-block;
   font-size: 32px;
   margin: auto;
+}
+
+.forecast-temp {
+font-size: 15px;
+}
+
+.forecast-temp-max {
+font-weight: bold;
+opacity: 0.8;
 }
 
 footer {
