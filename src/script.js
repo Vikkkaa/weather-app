@@ -40,6 +40,31 @@ if (minutes < 10) {
 
 weekDay.innerHTML = `${day} | ${date} ${month} | ${hours}:${minutes}`;
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+
+  let forecastHTML = `<div class = "row">`;
+  
+  days.forEach(function (day) {
+    forecastHTML =
+    forecastHTML +
+    `<div class="col-sm">
+            <div class="col-body">
+                    <h4 class="col-title forecast-day">${day}</h4>
+                    <i src = "http://www.gstatic.com/images/icons/material/apps/weather/2x/partly_cloudy_light_color_96dp.png" class="material-icons md-12 emoji" id="icon">cloud</i>
+                    <p class="col-text forecast-temp">
+                      <span class = "forecast-temp-max">26°</span>
+                      <span class = "forecast-temp-min">18°</span>
+                    </p>
+            </div>
+     </div>`;
+  });
+ 
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   console.log(response.data);
   document.querySelector("#city-name").innerHTML = response.data.name;
@@ -53,6 +78,8 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
+  showForecast();
 
   celcTemp = Math.round(response.data.main.temp);
 

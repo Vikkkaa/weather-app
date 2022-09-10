@@ -117,7 +117,9 @@ font-weight: bold;
 opacity: 0.8;
 }
 
-footer {
+.footer {
   font-size: smaller;
   position: relative;
+  margin-left: 15px;
+
 }
