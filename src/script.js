@@ -41,13 +41,13 @@ if (minutes < 10) {
 weekDay.innerHTML = `${day} | ${date} ${month} | ${hours}:${minutes}`;
 
 function showForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let weekForecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class = "row">`;
 
-  weekForecast.forEach(function (forecastDay) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `<div class="col-sm">
@@ -68,8 +68,8 @@ function showForecast(response) {
 
 function getWeekForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "c4c34c2ee0b71307b00dc7655493ef9a";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/forecast?&lat=${coordinates.lat}&lon=${coordinates.lon}&appid={apiKey}&&units=metric`;
+  let apiKey = "eae061c95483dd066657bfc7525418ed";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(showForecast);
 }
