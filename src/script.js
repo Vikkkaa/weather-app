@@ -41,22 +41,22 @@ if (minutes < 10) {
 weekDay.innerHTML = `${day} | ${date} ${month} | ${hours}:${minutes}`;
 
 function showForecast(response) {
-  console.log(response.data);
-  let forecastElement = document.querySelector("#forecast");
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
 
+  let weekForecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  
   let forecastHTML = `<div class = "row">`;
   
-  days.forEach(function (day) {
+  weekForecast.forEach(function(forecastDay) {
     forecastHTML =
-    forecastHTML +
-    `<div class="col-sm">
+      forecastHTML +
+      `<div class="col-sm">
             <div class="col-body">
-                    <h4 class="col-title forecast-day">${day}</h4>
-                    <i src = "http://www.gstatic.com/images/icons/material/apps/weather/2x/partly_cloudy_light_color_96dp.png" class="material-icons md-12 emoji" id="icon">cloud</i>
+                    <h4 class="col-title forecast-day">${forecastDay.dt}</h4>
+                    <img src = "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" class="emoji" id="icon" alt ="" width = "32"/>
                     <p class="col-text forecast-temp">
-                      <span class = "forecast-temp-max">26°</span>
-                      <span class = "forecast-temp-min">18°</span>
+                      <span class = "forecast-temp-max">${forecastDay.temp.max}°</span>
+                      <span class = "forecast-temp-min">${forecastDay.temp.min}°</span>
                     </p>
             </div>
      </div>`;
@@ -87,7 +87,7 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-
+  
 
   celcTemp = Math.round(response.data.main.temp);
 
