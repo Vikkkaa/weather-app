@@ -60,21 +60,21 @@ function showForecast(response) {
         forecastHTML +
         `<div class="col-sm">
             <div class="col-body">
-                    <h4 class="col-title forecast-day">${formatDay(
-                      forecastDay.dt
-                    )}</h4>
+                <h4 class="col-title forecast-day">${formatDay(
+                  forecastDay.dt
+                )}</h4>
                  
-                    <img src = "http://openweathermap.org/img/wn/${
-                      forecastDay.weather[0].icon
-                    }@2x.png" class="emoji" id="icon" alt ="" width = "42"/>
-                    <p class="col-text forecast-temp">
-                      <span class = "forecast-temp-max">${Math.round(
-                        forecastDay.temp.max
-                      )}°</span>
-                      <span class = "forecast-temp-min">${Math.round(
-                        forecastDay.temp.min
-                      )}°</span>
-                    </p>
+                <img src = "http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" class="emoji" id="icon" alt ="" width = "42"/>
+                <p class="col-text forecast-temp">
+                <span class = "forecast-temp-max" id = "forecast-temp-max">${Math.round(
+                  forecastDay.temp.max
+                )}°</span>
+                <span class = "forecast-temp-min" id = "forecast-temp-min">${Math.round(
+                  forecastDay.temp.min
+                )}°</span>
+                </p>
             </div>
      </div>`;
     }
@@ -150,32 +150,5 @@ form.addEventListener("submit", submitSearch);
 
 let currentButton = document.querySelector("#button-currently");
 currentButton.addEventListener("click", showCurrentLoc);
-
-function showFahTemp(event) {
-  event.preventDefault();
-  let tempInput = document.querySelector("#current-temperature");
-
-  celciusLink.classList.remove("inactive");
-  fahrenheitLink.classList.add("active");
-
-  let fahTemp = (celcTemp * 9) / 5 + 32;
-  tempInput.innerHTML = Math.round(fahTemp);
-}
-
-function showCeTemp(event) {
-  event.preventDefault();
-  let tempInput = document.querySelector("#current-temperature");
-
-  celciusLink.classList.add("inactive");
-  fahrenheitLink.classList.remove("active");
-
-  tempInput.innerHTML = celcTemp;
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahTemp);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", showCeTemp);
 
 search("Maiorca");
