@@ -62,30 +62,6 @@ form {
   margin-left: 0px;
 }
 
-.units {
-  position: relative;
-  font-size: small;
-  bottom: 25px;
-  text-decoration: none;
-}
-
-.weather-temperature .active {
-  color: #777777;
-  cursor: default;
-  text-decoration: none;
-}
-
-.weather-temperature .active:hover {
-  color: #777777;
-  cursor: default;
-  text-decoration: none;
-}
-
-.weather-temperature .inactive {
-  cursor: default;
-  text-decoration: none;
-}
-
 .col-6 {
   font-size: 15px;
   text-transform: capitalize;
@@ -100,6 +76,14 @@ h2 {
 h4 {
   font-weight: 600;
   color: #a1a1a1;
+}
+
+.units {
+  position: relative;
+  font-size: 18px;
+
+  bottom: 25px;
+  margin-left: 0px;
 }
 
 .emoji {
